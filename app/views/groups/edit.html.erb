@@ -1,14 +1,6 @@
 <div>
   <h2>编辑讨论版</h2>
-  <%= form_for @group do |f| %>
-    <% if @group.errors.any? %>
-      <%= @group.errors.full_messages.each do |msg| %>
-        <%= msg %>
-      <% end %>
-    <% end %>
+  <hr>
 
-    <%= f.text_field :title %>
-    <%= f.text_area :description %>
-    <%= f.submit "Submit", :disable_with => 'Submit...' %>
-  <% end %>
+  <%= render "form" %>
 </div>
